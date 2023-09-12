@@ -306,6 +306,21 @@ class Phase(ABC):
         chat_env = self.update_chat_env(chat_env)
         return chat_env
 
+class IdeaGeneration(Phase):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
+    def update_phase_env(self, chat_env):
+        self.phase_env = {"task": chat_env.env_dict['task_prompt']}
+    
+    def update_chat_env(self, chat_env) -> ChatEnv:
+        if len(self.seminar_conclusion) > 0 and "<INFO>" in self.seminar_conclusion:
+            chat_env.env_dict['ideas'] = self.seminar_conclusion.split("<INFO>")[-1].lower().replace(".", "").strip()
+        elif len(self.seminar_conclusion) > 0:
+            chat_env.env_dict['ideas'] = self.seminar_conclusion
+        else: 
+            chat_env.env_dict['ideas'] = "I have no idea"   
+        return chat_env
 
 class DemandAnalysis(Phase):
     def __init__(self, **kwargs):

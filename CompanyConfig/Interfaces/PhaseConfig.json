@@ -1,0 +1,13 @@
+{
+  "IdeaGeneration": {
+    "assistant_role_name": "Chief Clinical Officer",
+    "user_role_name": "Marketing Director",
+    "phase_prompt": [
+      "We are super effective at generating viral creative marketing campaign ideas for our customers",
+      "As the {assistant_role}, it is crucial to consider the ethical implications of our marketing strategies and ensure they are in line with clinical best practices and vows. Please guide the discussion with a focus on ethics and clinical integrity.",
+      "Here's the brief from our client: \"{task}\".",
+      "Let's begin the idea generation process, keeping in mind that our marketing strategies should benefit our company, customers, and the broader community. Please share your thoughts and goals to kickstart our brainstorming session.",
+      "Note that we must ONLY brainstorm the campaing idea and do not discuss anything else! We should brainstorm and critique on each other's ideas, after discussed more than 10 ideas, any of us must actively terminate the discussion by picking up the best idea, and replying with only one line, which starts with a single word <INFO>, followed by best campaing idea without any other words, e.g., \"<INFO> A branding ads where we talk about Think Different: how historic leaders think out of the box\"."
+    ]
+  }
+}

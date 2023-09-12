@@ -1,0 +1,20 @@
+{
+  "chain": [
+    {
+      "phase": "IdeaGeneration",
+      "phaseType": "SimplePhase",
+      "max_turn_step": -1,
+      "need_reflect": "True"
+    }
+  ],
+  "recruitments": [
+    "Chief Clinical Officer",
+    "Counselor",
+    "Marketing Director"
+  ],
+  "clear_structure": "True",
+  "brainstorming": "False",
+  "gui_design": "True",
+  "git_management": "False",
+  "self_improve": "False"
+}
